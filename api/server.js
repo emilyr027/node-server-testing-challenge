@@ -1,6 +1,6 @@
 const express = require('express')
 
-const todosRouter = require('../todos/todos-router')
+const todosRouter = require('./todos/todos-router')
 
 const server = express()
 

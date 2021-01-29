@@ -1,4 +1,4 @@
-const Todos = require('./todos-model')
+const Todos = require('../todos/todos-model')
 
 const validateTodoId = async (req, res, next) => {
     const { id } = req.params

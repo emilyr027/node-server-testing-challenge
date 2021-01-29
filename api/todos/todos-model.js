@@ -4,6 +4,7 @@ module.exports = {
     getAll,
     findById,
     insert,
+    update,
     remove
   }
   
@@ -19,6 +20,11 @@ module.exports = {
     return db('todos')
     .insert(data, 'id')
     .then(ids => ({ id: ids[0], ...data}))
+  }
+
+  async function update(id, changes) {
+    return db('todos').update(changes)
+      .where({ id })
   }
   
   function remove(id) {
